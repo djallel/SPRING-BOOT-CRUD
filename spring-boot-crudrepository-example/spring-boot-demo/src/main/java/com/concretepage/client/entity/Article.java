@@ -2,6 +2,7 @@ package com.concretepage.client.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 @Table(name="articles")
@@ -33,4 +34,6 @@ public class Article implements Serializable {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-} 
+
+
+}

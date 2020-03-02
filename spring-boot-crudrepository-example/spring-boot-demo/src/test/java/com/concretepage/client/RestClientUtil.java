@@ -65,10 +65,10 @@ public class RestClientUtil {
     }
     public static void main(String args[]) {
     	RestClientUtil util = new RestClientUtil();
-        //util.getArticleByIdDemo();
-    	//util.addArticleDemo();
-    	//util.updateArticleDemo();
-    	//util.deleteArticleDemo();
+        util.getArticleByIdDemo();
+    	util.addArticleDemo();
+    	util.updateArticleDemo();
+    	util.deleteArticleDemo();
     	util.getAllArticlesDemo();    	
     }    
 }

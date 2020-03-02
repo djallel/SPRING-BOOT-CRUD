@@ -1,15 +1,10 @@
 package com.concretepage.client;
 
-import java.net.URI;
-
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
+import com.concretepage.client.entity.Article;
+import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
-import com.concretepage.entity.Article;
+import java.net.URI;
 
 public class RestClientUtil {
     public void getArticleByIdDemo() {
@@ -46,7 +41,7 @@ public class RestClientUtil {
 	    objArticle.setCategory("Spring");
         HttpEntity<Article> requestEntity = new HttpEntity<Article>(objArticle, headers);
         URI uri = restTemplate.postForLocation(url, requestEntity);
-        System.out.println(uri.getPath());    	
+        System.out.println(uri.getPath());
     }
     public void updateArticleDemo() {
     	HttpHeaders headers = new HttpHeaders();
@@ -66,7 +61,7 @@ public class RestClientUtil {
         RestTemplate restTemplate = new RestTemplate();
 	    String url = "http://localhost:8080/user/article/{id}";
         HttpEntity<Article> requestEntity = new HttpEntity<Article>(headers);
-        restTemplate.exchange(url, HttpMethod.DELETE, requestEntity, Void.class, 4);        
+        restTemplate.exchange(url, HttpMethod.DELETE, requestEntity, Void.class, 4);
     }
     public static void main(String args[]) {
     	RestClientUtil util = new RestClientUtil();

@@ -1,8 +1,8 @@
-package com.concretepage.service;
+package com.concretepage.client.service;
+
+import com.concretepage.client.entity.Article;
 
 import java.util.List;
-
-import com.concretepage.entity.Article;
 
 public interface IArticleService {
      List<Article> getAllArticles();
